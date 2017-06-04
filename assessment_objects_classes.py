@@ -78,3 +78,35 @@ class Exam(object):
         return float(self.score) / float(self.number_of_questions) * 100
 
 
+class StudentExam(object):
+    def __init__(self, student, exam):
+        self.student = student
+        self.exam = exam
+        self.score = 0
+
+    def take_test(self):
+        self.score = self.exam.administer()
+        print "Your score is " + str(self.score)
+
+
+def example():
+    exam = Exam("SAT") 
+    
+    question_1 = Question("what color is the sky?", "blue")
+    question_2 = Question("what color is a sea lion?", "brown")
+    question_3 = Question("what color does red and blue mixed make?", "purple")
+    
+    exam.add_question(question_1)
+    exam.add_question(question_2)
+    exam.add_question(question_3)
+
+    nura = Student("nura", "renke", "123 street")
+
+    student_exam = StudentExam(nura, exam)
+
+    student_exam.take_test()
+
+
+
+
+
