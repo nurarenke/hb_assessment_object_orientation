@@ -47,7 +47,34 @@ class Question(object):
         self.question = question
         self.correct_answer = correct_answer
 
+    def ask_and_evaluate(self):
+        print self.question 
+        user_answer = raw_input("answer >>" )
+
+        if user_answer == self.correct_answer:
+            return True
+        else:
+            return False
+
+
 class Exam(object):
-    def __init__(self, exam_name, questions):
+    def __init__(self, exam_name):
         self.exam_name = exam_name
         self.questions = []
+
+    def add_question(self, question):
+        self.questions.append(question)
+
+    def administer(self):
+        self.score = 0
+        self.number_of_questions = len(self.questions)
+
+        for each_question in self.questions:
+            correct = each_question.ask_and_evaluate()
+
+            if correct:
+                self.score = self.score + 1
+
+        return float(self.score) / float(self.number_of_questions) * 100
+
+
