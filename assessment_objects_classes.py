@@ -4,18 +4,18 @@ Part 1: Discussion
 1. What are the three main design advantages that object orientation
    can provide? Explain each concept.
    Abstraction: 
-    You don't need to know about the interal fuctionality of the method; just the call signature. 
+    The act of hiding the interal fuctionality of methods and attributes of a class and calling only the signature
+    of a method. 
 
    Encapsulation: 
-    All attributes and methods organized into one object, so that you can call their methods on other objects.
+    Encapsulations organizes all attributes and methods into one class. Abstraction is achieved though encapsulation.  
 
-   Polyomorphism:
-    Which gives us uniformity and predictablity. This is acheived through inheritance from parent to child classes.
+   Polymorphism:
+    Polymorphism means "many forms" is able to handle different forms of inputs to return a predictable output. 
+    This is acheived through inheritance from parent to child classes.
 
 2. What is a class?
-    It is a set of instructions to use methods, attributes, and instances that pertains to the class.
-    Once you create an object within the class, you can use your set of instructions to interact with
-    that object. 
+    It is an object that contains methods and attributes that pertains to the class. 
 
 3. What is an instance attribute?
     Once we instatiate an instance, or create an object with a particular class then we can add 
